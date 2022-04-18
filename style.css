@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4d4d4dff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 20% 80%;
+    -webkit-box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.74); 
+    box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.74);
+    border-radius: 10px;
+}
+
+
+/* ############ LOGO ############ */
+
+.lib-logo {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lib-logo span {
+    font-size: 60px;
+}
+
+.lib-logo h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+
+/* ############################### */
+
+/* ############ TABLE ############ */
+
+.lib-container {
+    grid-row: 2 / 3;
+    background-color: rgb(54, 54, 54);
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+
+.lib-table {
+    width: 100%;
+    overflow: auto;
+    grid-row: 1 / 2;
+}
+
+.lib-table table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #333333ff;
+}
+
+thead th {
+    padding: 8px;
+    color: tomato;
+}
+
+tbody td {
+    padding: 14px;
+    color: white;
+}
+
+tbody > tr > td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:last-child {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #4d4d4dff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #808080ff;
+}
+
+.lib-add-btn{
+    grid-row: 2 / 3;
+}
+
+.add-book {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    padding: 5px 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    border: 1px solid white;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.add-book:hover {
+    color: tomato;
+    border: 1px solid tomato;
+    background-color: #333333ff;
+}
+
+/* ############################### */
+
+/* ############ LGO ############ */
+
+.lib-log {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.lib-log div {
+    width: 80%;
+    margin-top: 35px;
+    background-color: #4d4d4dff;
+    padding: 30px 15px;
+    box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.74);
+    border-radius: 10px;
+}
+
+.lib-log div h3 {
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ############################### */
