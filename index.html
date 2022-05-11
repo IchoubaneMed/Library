@@ -19,6 +19,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Title</th>
                             <th>Author</th>
                             <th>Pages</th>
@@ -28,7 +29,8 @@
                             <th>btn</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="body-table">
+                        <!--
                         <tr>
                             <td>Fear and Loathing in Las Vegas</td>
                             <td>Hunter S. Thompson</td>
@@ -110,6 +112,7 @@
                             <td><span class="mdi mdi-application-edit-outline"></span></td>
                             <td><span class="mdi mdi-delete"></span></td>
                         </tr>
+                        -->
                     </tbody>
                 </table>
             </div>
@@ -119,10 +122,10 @@
         </div>
         <div class="lib-log">
             <div>
-                <h3 class="total-books">Total Book: <span>7</span></h3>
-                <h3 class="total-pages">Total Pages: <span>2717</span></h3>
-                <h3 class="read-books">Read Books: <span>4</span></h3>
-                <h3 class="unread-books">Unread Books: <span>3</span></h3>
+                <h3>Total Book: <span class="total-books">7</span></h3>
+                <h3>Total Pages: <span class="total-pages">2717</span></h3>
+                <h3>Read Books: <span class="read-books">4</span></h3>
+                <h3>Unread Books: <span class="unread-books">3</span></h3>
             </div>
         </div>
     </div>
@@ -138,20 +141,19 @@
             
             <form action="">
                 <label for="title">Book Title*</label>
-                <input type="text" name="title" id="title" placeholder="Title" required>
+                <input type="text" name="title" id="title" placeholder="Title" >
                 
                 <label for="book-author">Book Author*</label>
-                <input type="text" name="bookAuthor" id="book-author" placeholder="Author" required>
+                <input type="text" name="bookAuthor" id="book-author" placeholder="Author" >
                 
                 <label for="number-of-pages">Number of Pages*</label>
-                <input type="number" name="numberOfPages" id="number-of-pages" min="1" step="1" placeholder="Number of pages" required>
+                <input type="number" name="numberOfPages" id="number-of-pages" min="1" step="1" placeholder="Number of pages" >
                 
                 <label for="publishing-date">Publishing Date*</label>
-                <input type="date" name="publishingDate" id="publishing-date" required>
+                <input type="date" name="publishingDate" id="publishing-date" >
                 
                 <label for="book-status">Book Status*</label>
-                <select name="bookStatuts" id="book-status" required>
-                    <option selected disabled>Do you read this book ?</option>
+                <select name="bookStatuts" id="book-status" >
                     <option value="readit">I already read it</option>
                     <option value="unreadit">Still have to read it</option>
                 </select>
