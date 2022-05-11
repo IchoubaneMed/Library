@@ -12,7 +12,11 @@ const modalForm = document.querySelector(".modal-form");
 /* Get the table body */
 const bodyTable = document.querySelector(".body-table");
 
-
+// Get the log classes
+const totalBooks = document.querySelector('.total-books');
+const totalPages = document.querySelector('.total-pages');
+const readBooks = document.querySelector('.read-books');
+const unreadBooks = document.querySelector('.unread-books');
 
 /* Listen for events */
 addBookBtn.addEventListener("click", () => {
@@ -33,6 +37,8 @@ document.addEventListener('DOMContentLoaded', displayBooks);
 function displayBooks() {
 
     let books = getBooks();
+
+    libLog(books);
 
     books.forEach((book, index) => {addBookToList(book, index)});
 
@@ -68,6 +74,30 @@ function addBookToLibrary(event) {
     clearFields();
 
     location.reload();
+}
+
+// Display infos inside the log 
+
+function libLog(books) {
+    let totalBooksConter = books.length;
+    let totalPagesCounter = 0;
+    let readBooksConter = 0;
+    let unreadBooksCounter = 0;
+
+    for (let i = 0; i < books.length; i += 1) {
+        totalPagesCounter += parseInt(books[i].pages);
+        if (books[i].status === "readit") {
+            readBooksConter += 1;
+        } else {
+            unreadBooksCounter += 1;
+        }
+    }
+
+    totalBooks.innerHTML = `${totalBooksConter}`;
+    totalPages.innerHTML = `${totalPagesCounter}`;
+    readBooks.innerHTML = `${readBooksConter}`;
+    unreadBooks.innerHTML = `${unreadBooksCounter}`;
+
 }
 
 // Display books inside the table
@@ -145,7 +175,7 @@ bodyTable.addEventListener("click", e => {
     }
 });
 
-// func
+// function that toogle the status
 
 function toggleStatus(id){
     const books = getBooks();
